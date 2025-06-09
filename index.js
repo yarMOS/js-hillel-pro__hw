@@ -1,3 +1,5 @@
+'use strickt';
+
 let input = prompt("Введіть п'ятизначне число:");
 
 if (/^\d{5}$/.test(input)) {
