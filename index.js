@@ -1,4 +1,4 @@
-'use strickt'; // писать на начале каждого задания!!
+'use strict'; // писать на начале каждого задания!!
 
 const BIG_ADDITIONAL_NUM = 5;
 const MEDIUM_ADDITIONAL_NUM = 3;
@@ -7,6 +7,12 @@ const MAX_SUM = 100;
 
 const LARGE_BOUNDARY_NUM = 10;
 const SMALL_BOUNDARY_NUM = 3;
+
+console.log(typeof SMALL_ADDITIONAL_NUM);
+console.log(typeof BIG_ADDITIONAL_NUM);
+console.log(typeof MEDIUM_ADDITIONAL_NUM);
+console.log(typeof MAX_SUM);
+console.log(typeof LARGE_BOUNDARY_NUM);
 
 const userNum = prompt('Enter a number'); // cancel - null, enters nothing = '', enteres whitespaces only - '    ', enters not a number - ' d3fqwe123 ', enters a number - '  234 '
 let sum;
