@@ -13,6 +13,11 @@ console.log(typeof BIG_ADDITIONAL_NUM);
 console.log(typeof MEDIUM_ADDITIONAL_NUM);
 console.log(typeof MAX_SUM);
 console.log(typeof LARGE_BOUNDARY_NUM);
+console.log(typeof 123); 
+console.log(typeof undefined);
+console.log(typeof true);
+console.log(typeof null);
+console.log(typeof "hello");
 
 const userNum = prompt('Enter a number'); // cancel - null, enters nothing = '', enteres whitespaces only - '    ', enters not a number - ' d3fqwe123 ', enters a number - '  234 '
 let sum;
