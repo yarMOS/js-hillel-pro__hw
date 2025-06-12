@@ -1,55 +1,31 @@
 'use strict';
 
-const userName = prompt('Введите Ваше Имя');
-const userAge = prompt('Введите Ваш возраст');
-const userJob = prompt('Введите Вашу работу');
+alert(`Введіть будь ласка ваші данні:`);
+const userName = prompt('Ваше імʼя ?');
+    if (userName === null || userName === '') {
+        alert(`Шкода, що Ви не захотіли вказати своє імʼя.`);
+        userName = `Користувач не вказав імʼя.`;
+    } else if(!isNaN(userName)){
+        alert(`Ви ввели некоректне значення! Введіть ваше імʼя не в числовому значенні.`);
+        userName = prompt('Ваше імʼя ?');
+    }
 
-if (userName === null) {
-    alert('ok, bye');
-}
-else if (userName.trim() === '') {
-    alert('Error: Nothing is entered')
-}
-else if (isNaN(userName)) {
-    alert('Error: invalid number')
-}
-else if (!Number.isInteger(+userName)) {
-    alert('Error: invalid whole number')
-}
-else if (userName <= 0) {
-    alert('Error: invalid whole number')
-}
+const userAge = +prompt(`Ваш вік ?`);
+    if (userAge === 0 || userAge === '') {
+        alert(`Шкода, що Ви не захотіли вказати свій вік.`);
+        userAge = `Користувач не вказав кількість`;
+    } else  if(isNaN(userAge)) {
+        alert(`Ви ввели некоректне значення! Введіть ваш вік в числовому значенні.`);
+        userAge = +prompt(`Ваш вік ?`);
+    }
 
-if (userAge === null) {
-    alert('ok, bye');
-}
-else if (userAge.trim() === '') {
-    alert('Error: Nothing is entered')
-}
-else if (isNaN(userAge)) {
-    alert('Error: invalid number')
-}
-else if (!Number.isInteger(+userAge)) {
-    alert('Error: invalid whole number')
-}
-else if (userAge <= 0) {
-    alert('Error: invalid whole number')
-}
+const userJob = prompt(`Ваше місто роботи ?`);
+    if (userJob === null || userJob === '') {
+        alert(`Шкода, що Ви не захотіли вказати своє місце роботи.`);
+        userJob = `Користувач не вказав місце роботи.`;
+    } else if(!isNaN(userJob)){
+        alert(`Ви ввели некоректне значення! Введіть ваше місце не в числовому значенні.`);
+        userJob = prompt(`Ваше місце роботи ?`);
+    }
 
-if (userJob === null) {
-    alert('ok, bye');
-}
-else if (userJob.trim() === '') {
-    alert('Error: Nothing is entered')
-}
-else if (isNaN(userJob)) {
-    alert('Error: invalid number')
-}
-else if (!Number.isInteger(+userJob)) {
-    alert('Error: invalid whole number')
-}
-else if (userJob <= 0) {
-    alert('Error: invalid whole number')
-}
-
-alert(`${userName} ${userAge} ${userJob}`);
+alert(`Імʼя користувача: ${userName}, Вік користувача: ${userAge}, Місце користувача: ${userJob}`)
