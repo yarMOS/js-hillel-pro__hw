@@ -12,7 +12,7 @@ if (userAge === null || userAge.trim() === "") {
     userAge = +userAge;
     if (
         (userAge >= 10000 && userAge <= 99999) || (userAge <= -10000 && userAge >= -99999)) {
-        let space = String(userAge).split("").join(" ");
+        const space = String(userAge).split("").join(" ");
         alert(`Ваше 5-ти значне число: ${space}`);
     } else {
         alert("Дозволені лише 5-ти значнi числа.");
