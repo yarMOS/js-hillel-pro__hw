@@ -6,7 +6,10 @@ let userAge = prompt('Ваш вік:');
 if (userAge === null || userAge.trim() === ''){
     alert('Шкода, що Ви не захотіли вказати свій вік.');
     userAge = 'Користувач не вказав кількість.'
-} else if (isNaN(userAge)){
+} else if (Number(userAge) < 0 || Number(userAge) > 100) {
+    alert('Ви ввели некоректне значення! Вiд 6 до 100.')
+    userAge = 'Користувач не вказав свiй реальний вiк'
+} else if (isNaN(userAge)) {
     alert("Ви ввели некоректне значення! Введіть ваш вік в числовому значенні.");
     userAge = +prompt('Ваш вік:');
     if (isNaN(userAge) || userAge === null || userAge === ''){
